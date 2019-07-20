@@ -36,7 +36,7 @@ func templateWriter(w http.ResponseWriter, r *http.Request) {
 		Name: template.HTML(r.Form.Get("aname")),
 	}
 	if data.Name == "" {
-		w.Write([]byte("<h1>Plase provide a name!</h1>"))
+		w.Write([]byte("<h1>Please provide a name!</h1>"))
 		return
 	}
 	const temp = `<h1>Hi! My name is {{.Name}}</h1>`
